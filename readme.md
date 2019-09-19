@@ -2,7 +2,7 @@
 <p align="center">Serabine.co</p>
 
 ## BAHAN SEBELUM INSTALL 
-1. Install [Composer]()
+1. Install [Composer](https://getcomposer.org/download/)
 2. PHP 7++
 3. DB(MariaDB)
 
