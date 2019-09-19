@@ -18,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('DataTables/datatables.min.css') }}">
   <link href="{{ URL::asset('assets/css/now-ui-dashboard.css?v=1.3.0') }}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{ URL::asset('assets/demo/demo.css" rel="stylesheet') }}" />
+  <link href="{{ URL::asset('assets/demo/demo.css') }}" rel="stylesheet" />
 </head>
 
 <body class="">

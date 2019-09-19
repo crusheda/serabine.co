@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +66,58 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+@extends('layouts.app')
+@section('content')
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LOGIN</title>
+        <link href="{{ URL::asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+        <script src="{{ URL::asset('assets/js/core/jquery.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/core/bootstrap.min.js') }}"></script>
+        <link href="{{ URL::asset('css/css-login.css') }}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Icon -->
+              <div class="fadeIn first">
+                <br><img src="{{ URL::asset('image/serabine-mini.png') }}" style="height:60px;width:60px" id="icon" alt="User Icon" /><hr>
+              </div>
+
+              <!-- Login Form -->
+                <div class="container">
+                    <form method="POST" action="{{ route('login') }}">@csrf
+                        <h6 for="email" class="text-left">Email</h6>
+                        <input id="email" type="email" class="form-control fadeIn second @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror<br>
+                        <h6 for="password" class="text-left">Password</h6>
+                        <input id="password" type="password" class="fadeIn third form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror<hr>
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember Me') }}
+                        </label>
+                        <br>
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
 @endsection

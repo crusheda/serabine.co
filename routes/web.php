@@ -12,10 +12,10 @@
 */
 Auth::routes();
 Route::middleware('auth')->group(function (){
-Route::get('/dashboard', 'dashboard@index')->name('dashboard');
+Route::get('/', 'dashboard@index')->name('dashboard');
 Route::resource('karyawan', 'karyawanController');
 Route::get('/mamdani', 'mamdaniController@index')->name('hitung');
 Route::get('/mamdani/simpan', 'mamdaniController@simpanOutput');
 Route::get('/hasil','historyController@index')->name('hasil');
 });
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');

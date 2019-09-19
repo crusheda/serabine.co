@@ -11,7 +11,7 @@
     <div class="sidebar-wrapper" id="sidebar-wrapper">
       <ul class="nav">
         <li>
-          <a href="{{ url('dashboard') }}">
+          <a href="{{ route('dashboard') }}">
             <i class="now-ui-icons design_app"></i>
             <p>Dashboard</p>
           </a>

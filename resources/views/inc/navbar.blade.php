@@ -21,12 +21,9 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown">
               <i class="now-ui-icons users_single-02"></i>
               {{ Auth::user()->name }}
-              <p>
-                <span class="d-lg-none d-md-block">Account</span>
-              </p>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ url('dashboard') }}">Dashboard</a>
+                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
 
